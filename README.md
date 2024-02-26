@@ -2,5 +2,5 @@
 Uma pagina clone da pagina do Disney+
 
 Ferramentas usadas:
-Less
+Less,
 Gulp
