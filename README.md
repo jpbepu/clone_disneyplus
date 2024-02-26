@@ -1,6 +1,4 @@
 # clone_disneyplus
-Uma pagina clone da pagina do Disney+
+O projeto se propõe a fazer um clone da página do Disney+ e foi desenvolvido como exercício no curso "Engenheiro Front-End" da escola EBAC.
 
-Ferramentas usadas:
-Less,
-Gulp
+Foi utilizado o Gulp como ferramenta de automação de processos, com os plugins "gulp-watch", "gulp-less" e "gulp-sourcemaps", e o Less como pré-processador do CSS
