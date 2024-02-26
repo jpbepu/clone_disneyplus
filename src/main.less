@@ -1,5 +1,8 @@
 @import "./styles/var.less";
 @import "./styles/mixins.less";
+@import "./styles/fonts.less";
+
+
 
 *{
     margin: 0;
@@ -7,7 +10,130 @@
     box-sizing: border-box;
 }
 
-body{
- background-color: aqua;   
+html{
+ background-color: @page-bg;  
 }
 
+li{
+    list-style: none;
+}
+
+
+body{
+    font-family: @text-font;
+    color: @text-color;
+}
+
+
+.nav{
+    position: absolute;
+    width: 100%;
+}
+
+.nav-list{
+
+    height: 70px;
+
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin: 20px 0;
+    padding: 0 36px;
+
+    &__item{
+        .font-size(18px);
+
+
+        padding: 8px 16px;
+
+        border: solid 1px @title-color;
+        color: @title-color;
+        border-radius: 4px;
+
+        cursor: pointer;
+
+        transition: 200ms;
+
+        &:hover{
+            background-color: @title-color;
+            color: @page-bg;
+        }
+
+    }
+
+}
+
+.hero{
+
+    background-image: url(./img/hero_desktop.jpeg);
+    background-size: cover;
+    min-height: 80vh;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5.6vw;
+    padding-top: 100px;
+
+
+    &__content{
+        max-width: 640px;
+        width: 50%;
+        z-index: 1;
+
+        &__branding{
+            text-align: left;
+            width: 180px;
+        }
+
+        .title--lg{
+            margin: 30px 0 20px 0;
+        }
+
+        &__button{
+            background-color: @hero-button-color;
+            width: 100%;
+            max-width: 700px;
+            padding: 20.5px 33px;
+            margin-bottom: 12px;
+
+            border: none;
+            border-radius: 4px;
+
+            font-family: @text-font;
+            color: @title-color;
+            .font-size();
+        }
+
+        &__link{
+            color: @text-color;
+            .font-size(20px);
+        }
+
+    }
+
+}
+
+
+.title--lg{
+    color: @title-color;
+    .font-size(44px)
+}
+
+.title--md{
+    color: @title-color;
+    .font-size(40px)
+}
+
+.text--lg{
+    .font-size(20px)
+}
+
+.text--md{
+    .font-size()
+}
+
+.text--sm{
+    .font-size(12px)
+}
